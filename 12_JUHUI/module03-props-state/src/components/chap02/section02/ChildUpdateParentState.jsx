@@ -3,11 +3,9 @@
 import { useState } from "react";
 
 // 자식 컴포넌트 : 부모로부터 받은 setCount함수를 사용
-function ChildButton(increaseCount) {
+function ChildButton({increaseCount}) {
   //console.log(props);
-  return (
-    <button onClick={increaseCount}>자식 컴포넌트에서 카운트 증가</button>
-  )
+  return <button onClick={increaseCount}>자식 컴포넌트에서 카운트 증가</button>;
 }
 
 // 부모 컴포넌트
@@ -40,7 +38,7 @@ export default function ChildUpdateParentState() {
     <div>
       <h2>부모 자식 상태 제어</h2>
       <p>현재 카운트 : {count}</p>
-      
+      <ChildButton increaseCount={handleIncrease} />
     </div>
   );
 }

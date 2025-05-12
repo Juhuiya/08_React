@@ -5,6 +5,5 @@ export default function Section02() {
     <div>
       <ChildUpdateParentState />
     </div>
-  )
+  );
 }
-

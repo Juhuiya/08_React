@@ -32,6 +32,9 @@ export default function Home() {
         <li>
           <Link href="/chap03/section01">Single Input</Link>
         </li>
+        <li>
+          <Link href="/chap03/section02">Multi Input</Link>
+        </li>
       </ul>
     </div>
   );
