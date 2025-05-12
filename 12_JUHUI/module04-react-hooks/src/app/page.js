@@ -19,6 +19,26 @@ export default function Home(second) {
           <Link href="/chap01/section04">UseEffectProblem</Link>
         </li>
       </ul>
+
+      <h3>chap02</h3>
+      <ul>
+        <li>
+          <Link href="/chap02/section01">UseLayoutEffect</Link>
+        </li>
+        <li>
+          <Link href="/chap02/section02">DomMeasure</Link>
+        </li>
+      </ul>
+
+      <h3>chap03</h3>
+      <ul>
+        <li>
+          <Link href='/chap03/section01'>UseRefDomAccess</Link>
+        </li>
+        <li>
+          <Link href='/chap03/section02'>UseRefValuekeep</Link>
+        </li>
+      </ul>
     </>
   );
 }
