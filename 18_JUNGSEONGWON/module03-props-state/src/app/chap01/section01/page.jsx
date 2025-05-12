@@ -1,4 +1,4 @@
-import PropsComponent from "@/components/section01/PropsComponent";
+import PropsComponent from "@/components/chap01/section01/PropsComponent";
 
 function Section01() {
   
