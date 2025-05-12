@@ -1,4 +1,4 @@
-'use client';
+"use client";
 /*
   [useEffect의 의존성 배열(Dependency Array)]
 
@@ -14,12 +14,29 @@
 - 의존성 배열을 잘못 설정하면 원치 않는 재실행이 발생하거나, 값이 최신이 아닐 수 있다.
 
 */
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export default function UseEffectDependency() {
+  const [text, setText] = useState("");
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log("text값이 변경되었습니다 : " + text);
+  }, [text]); // text의 값이 변경될때만 effect실행
+
+  const handleClick = () => {
+    console.log("count값이 변경되었습니다: ", count);
+    setCount(count + 1);
+  };
+
   return (
     <div>
-      <h2>check</h2>
+      <h2>useEffect 의존성 배열</h2>
+      <p>현재 카운트 : {count}</p>
+      <button onClick={handleClick}>증가</button>
+      <hr />
+      <input type='text' value={text} onChange={(e) => setText(e.target.value)} />
+      <p>현재 텍스트: {text}</p>
     </div>
   );
 }
