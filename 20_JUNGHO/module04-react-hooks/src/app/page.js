@@ -32,6 +32,26 @@ export default function Home() {
         <li>
           <Link href="/chap02/section02">DomMeasure</Link>
         </li>
+        <li>
+          <Link href="/chap02/section03">UseRef-TimerFocus</Link>
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>chap03</h2>
+      <ul>
+        <li>
+          <Link href={"/chap03/section01"}>useRef-DomAccess</Link>
+        </li>
+        <li>
+          <Link href={"/chap03/section02"}>useRef-ValueKeep</Link>
+        </li>
+
+        {/* 실습 문제 */}
+        <li>
+          <Link href={"/chap03/section03"}>UseRef-TimerFocus</Link>
+        </li>
       </ul>
     </>
   );
