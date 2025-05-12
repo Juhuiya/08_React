@@ -7,6 +7,7 @@ ref.current를 수정해도 컴포넌트는 재렌더링 되지않는다.
 > 리셋되지 않는 메모장과 같다.
 > 최근 입력값, 이전 상태값, 함수 호출 횟수 등을 기억할 때 유용하다.
 */
+
 "use client";
 
 import { useState, useRef } from "react";

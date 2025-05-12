@@ -33,10 +33,14 @@ export default function Home(second) {
       <h3>chap03</h3>
       <ul>
         <li>
-          <Link href='/chap03/section01'>UseRefDomAccess</Link>
+          <Link href="/chap03/section01">UseRefDomAccess</Link>
         </li>
         <li>
-          <Link href='/chap03/section02'>UseRefValuekeep</Link>
+          <Link href="/chap03/section02">UseRefValuekeep</Link>
+        </li>
+        {/* 과제 부분은 chap03-section03 */}
+        <li>
+          <Link href="/chap03/section03">UseRefTimerFocus</Link>
         </li>
       </ul>
     </>
