@@ -12,6 +12,12 @@ export default function Home(second) {
         <li>
           <Link href="/chap01/section02">UseEffectDependency</Link>
         </li>
+        <li>
+          <Link href="/chap01/section03">UseEffectCleanup</Link>
+        </li>
+        <li>
+          <Link href="/chap01/section04">UseEffectProblem</Link>
+        </li>
       </ul>
     </>
   );
