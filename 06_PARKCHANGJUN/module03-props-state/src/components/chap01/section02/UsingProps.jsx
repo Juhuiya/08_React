@@ -16,7 +16,6 @@
 
 // 구조분해를 사용하지 않고 props객체를 직접 사용하는 경우
 function Greeting(props) {
-
   return (
     <div>
       <p>안녕하세요, {props.name}님</p>
@@ -26,7 +25,7 @@ function Greeting(props) {
 }
 
 // 구조 분해(destructuring)를 사용하는 경우
-function GreetingDestructuring({ name, day = "쉬는날" }) {
+function GreetingDestructuring ({name, day ="쉬는날"}) {
   return (
     <div>
       <p>안녕하세요, {name}님</p>
@@ -38,9 +37,9 @@ function GreetingDestructuring({ name, day = "쉬는날" }) {
 export default function UsingProps() {
   return (
     <div>
-      <Greeting name='홍길동' day='금요일' />
-      <GreetingDestructuring name='유관순' day='금요일' />
-      <GreetingDestructuring name='강감찬' />
+      <Greeting name="홍길동" day="금요일" />
+      <GreetingDestructuring name="유관순" day="금요일" />
+      <GreetingDestructuring name="강감찬" />
     </div>
   );
 }
