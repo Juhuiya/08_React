@@ -53,6 +53,18 @@ export default function Home() {
           <Link href={"/chap03/section03"}>UseRef-TimerFocus</Link>
         </li>
       </ul>
+
+      <hr />
+
+      <h2>chap04</h2>
+      <ul>
+        <li>
+          <Link href={"/chap04/section01"}>useMemo-Example</Link>
+        </li>
+        <li>
+          <Link href={"/chap04/section02"}>useCallback</Link>
+        </li>
+      </ul>
     </>
   );
 }
