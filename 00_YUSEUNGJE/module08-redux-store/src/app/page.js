@@ -11,6 +11,13 @@ export default function Home() {
           <Link href='/chap01'>basicRedux</Link>
         </li>
       </ul>
+
+      <h2>chap02 basicRedux</h2>
+      <ul>
+        <li>
+          <Link href='/chap02'>combineReducers</Link>
+        </li>
+      </ul>
     </div>
   );
 }
