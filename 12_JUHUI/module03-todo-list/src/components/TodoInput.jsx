@@ -7,8 +7,10 @@ const TodoInput = ({ newTask, onInputChange, onKeyDown, onAddTask }) => {
             <input
                 type="text"
                 placeholder="Enter a task"
-                // value 처리리
+                // value 처리
+                value={newTask}
                 // 입력 값 변경 핸들러
+                onChange={onInputChange}
                 // 키 입력 핸들러 (Enter 키 감지)
                 style={styles.input}
             />

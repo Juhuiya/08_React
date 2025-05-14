@@ -7,10 +7,12 @@ import TodoItem from './TodooItem';   // 분리된 TodoItem 컴포넌트 임포�
 // Todo 리스트 전체를 관리하고 렌더링하는 컨테이너 컴포넌트
 const TodoList = () => {
     // 할 일 목록 상태 관리 (객체 형태로 id와 text 포함)
-    //const [todos, setTodos] 
+    //const [todos, setTodos]
+    const [todos, setTodos] = useState([]); 
 
     // 입력 필드의 값 상태 관리
     //const [newTask, setNewTask] 
+    const [newTask, setNewTask] = useState('');
 
     // 할 일 추가 함수
     const addTask = () => {
@@ -21,25 +23,32 @@ const TodoList = () => {
                 text: newTask.trim(),
             };
              // 새 배열로 상태 업데이트
+            setTodos([...todos, newTodo]);
              // 입력 필드 초기화
+            setNewTask('');
         }
     };
 
     // 할 일 삭제 함수
     const deleteTask = (id) => {
         // 필터링하여 새 배열로 상태 업데이트
+        setTodos(todos.filter(todo => todo.id !== id));
     };
 
     // 입력 필드 변경 핸들러
     const handleInputChange = (e) => {
-       
+        setNewTask(e.target.value);
     };
 
     // 입력 필드 키 입력 핸들러
     const handleInputKeyPress = (e) => {
-        //if (    코드 작성  ) { // e에서 enter키 눌렸는지확인인
+        //if (    코드 작성  ) { // e에서 enter키 눌렸는지확인
         //    addTask();   
         //}
+
+        if(e.key === 'Enter') {// e에서 enter키 눌렸는지확인
+            addTask();
+        }
     };
 
     return (
@@ -48,10 +57,17 @@ const TodoList = () => {
 
             {/* TodoInput 컴포넌트에 필요한 상태와 핸들러 전달 */}
             <TodoInput
-                // newTask 속성 추가 
+                // newTask 속성 추가
+                newTask={newTask}
+
                 // change 이벤트
+                onInputChange={handleInputChange}
+
                 // 키눌림 이벤트
-                // task 추가가
+                onKeyDown={handleInputKeyPress}
+
+                // task 추가
+                onAddTask={addTask}
             />
 
             <ul style={styles.todoList}>

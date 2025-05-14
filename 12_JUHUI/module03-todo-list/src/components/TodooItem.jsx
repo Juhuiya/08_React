@@ -7,7 +7,7 @@ const TodoItem = ({ todo, onDelete }) => {
             <span style={styles.todoText}>{todo.text}</span>
             
             {/* 클릭 시 onDelete 함수에 해당 todo의 id 전달 */}
-            <button >
+            <button onClick={()=> onDelete(todo.id)}>
                 Delete
             </button>
         </li>
